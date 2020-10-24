@@ -17,6 +17,7 @@
 			
 			function populateColumns()
 			{
+				terms.sort(function(curr, next){return curr.term.charCodeAt(0) - next.term.charCodeAt(0);});
 				for (var i = 0; i < terms.length; i++)
 				{
 					var par = document.createElement("p");
@@ -25,7 +26,7 @@
 					par.addEventListener("click", function() {definitionColumn.innerHTML = terms[this.idx].definition;});
 					termColumn.appendChild(par);
 				}
-			}			
+			}
 		</script>
 	</head>
 		
