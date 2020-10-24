@@ -1,0 +1,29 @@
+body
+{
+	width:90%;
+	margin:auto;
+	font:14pt calibri;
+}
+
+#defcol
+{
+	width:60%;
+	vertical-align:middle;
+}
+
+#termcol
+{
+	border: thin solid black;
+	border-radius:10px;
+}
+
+#termcol p
+{
+	cursor:pointer;
+}
+
+.column
+{
+	margin-top:50px;
+	padding:10px;
+}

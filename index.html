@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Java Glossary</title>
+		<link rel = "stylesheet" href = "columns.css" />
+		<link rel = "stylesheet" href = "glossary.css" />
+		<style></style>
+		<script src = "glossary.js" /></script>
+		<script>
+		
+			function initialize()
+			{
+				termColumn = document.getElementById("termcol");
+				definitionColumn = document.getElementById("defcol");
+				populateColumns();
+			}
+			
+			function populateColumns()
+			{
+				for (var i = 0; i < terms.length; i++)
+				{
+					var par = document.createElement("p");
+					par.innerHTML = terms[i].term;
+					par.idx = i;
+					par.addEventListener("click", function() {definitionColumn.innerHTML = terms[this.idx].definition;});
+					termColumn.appendChild(par);
+				}
+			}			
+		</script>
+	</head>
+		
+	<body onload = "initialize();">
+		<h1>Glossary of Java Terms</h1>
+		<div class = "column" id = "termcol"></div>
+		<div class = "column" id = "defcol"></div>
+		
+	</body>
+</html>
